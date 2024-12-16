@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="gallery">
+    <img src="puspha1.jpeg" alt="Image 1" onclick="enlargeImage(this)">
+    <img src="puspha2.jpeg" alt="Image 2" onclick="enlargeImage(this)">
+    <img src="puspha3.jpeg" alt="Image 3" onclick="enlargeImage(this)">
+    <img src="puspha4.jpeg" alt="Image 4" onclick="enlargeImage(this)">
+  </div>
+
+  <div class="modal" id="modal">
+    <span class="close" onclick="closeModal()">×</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <script>
+    function enlargeImage(img) {
+      const modal = document.getElementById('modal');
+      const modalImg = document.getElementById('modalImg');
+      modal.style.display = 'block';
+      modalImg.src = img.src;
+    }
+
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

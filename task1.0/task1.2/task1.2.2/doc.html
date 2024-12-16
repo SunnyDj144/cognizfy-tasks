@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Greeting Message</title>
+</head>
+<body>
+  <button onclick="showGreeting()">Greet Me!</button>
+
+  <script>
+    function showGreeting() {
+      const hours = new Date().getHours();
+      let message = '';
+      if (hours < 12) {
+        message = 'Good Morning!';
+      } else if (hours < 18) {
+        message = 'Good Afternoon!';
+      } else {
+        message = 'Good Evening!';
+      }
+      alert(message);
+    }
+  </script>
+</body>
+</html>
